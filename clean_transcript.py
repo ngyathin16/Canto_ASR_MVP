@@ -130,16 +130,16 @@ def clean_transcript(client: AzureOpenAI, deployment_name: str, content: str, js
     Send transcript to Azure OpenAI for cleaning.
     Processes entire SRT at once, or in chunks of 50 entries for very long files.
     """
-    system_prompt = f"""You are an expert Cantonese editor specializing in correcting ASR (Automatic Speech Recognition) transcription errors.
+    system_prompt = f"""You are an expert Cantonese transcription editor specializing in correcting ASR (Automatic Speech Recognition) transcription errors in noisy, real-world recordings (e.g., construction sites, tool operation, and safety briefings).
 
 ## Task
-Read the raw SRT transcript below. Identify and correct phonetic errors, homophones, and hallucinations based on the conversational context.
+Read the raw SRT transcript below. Identify and correct phonetic errors, homophones, and hallucinations based on the surrounding dialogue and the provided terminology context.
 
 ## Reasoning Process
 Before making corrections, consider:
-1. What is the scene/situation based on surrounding dialogue?
+1. What is the work situation / topic based on surrounding dialogue?
 2. Does this phrase make sense in context, or is it a phonetic mishearing?
-3. What Cantonese word or phrase sounds similar and fits the context?
+3. What Cantonese word/phrase or HK English term sounds similar and fits the context?
 
 ## Context
 {json_context}
@@ -147,14 +147,10 @@ Before making corrections, consider:
 ## Rules
 
 1. **Phonetic Priority**: Identify Cantonese homophones. If a phrase sounds like a term in the Context but looks wrong, replace it.
-   - Example: '阻撚密林' sounds like '左輪麥林' (Magnum) → correct it.
 
-2. **Fix Grammatical Disjoints**: If you see meaningless character combinations, infer the intended phrase from context.
-   - Example: '你血硬標' (meaningless) in a shooting scene → '啲血係咁飆' (Blood is spurting)
-   - Example: '血係咁飆' → '啲血係咁飆' (adding the missing classifier)
+2. **Fix Grammatical Disjoints**: If you see meaningless character combinations, infer the intended phrase from context. Prefer small edits and keep the speaker's intent.
 
-3. **Jargon Matching**: Look for terms like ".357", "Magnum", "UFO", "PPK". If nonsense characters sound similar, correct them.
-   - Example: "皮皮幾" → "PPK"
+3. **Domain Jargon Matching**: Preserve and correct technical terms common in construction audio (e.g., tools, materials, safety terms, measurements/units, model numbers, and acronyms). If nonsense characters sound like a technical term from the Context, switch it to the correct term.
 
 4. **HK English Code-Switching**: Hong Kong speakers mix English technical terms into Cantonese. If a Cantonese phrase sounds like an English word from the Context, switch it.
 
