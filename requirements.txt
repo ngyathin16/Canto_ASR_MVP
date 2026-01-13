@@ -1,0 +1,19 @@
+# PyTorch Installation (REQUIRED - install separately before other dependencies)
+# PyTorch must be installed first with the appropriate backend for your system.
+#
+# For CPU-only:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# For GPU (CUDA 12.1):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+#
+# See https://pytorch.org/get-started/locally/ for other CUDA versions
+
+# Core Dependencies
+transformers>=4.46.0        # Hugging Face ASR pipeline
+librosa>=0.10.0             # audio loading and resampling
+scipy>=1.10.0               # signal processing for audio preprocessing
+pydub>=0.25.1               # MP3 to WAV conversion
+python-dotenv>=1.0.0        # environment configuration
+tqdm>=4.67.0                # progress bars
+pydantic>=2.9.2             # data validation and typing support
+openai>=1.0.0               # Azure OpenAI API client
