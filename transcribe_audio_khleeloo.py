@@ -38,6 +38,7 @@ import torch
 from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor, pipeline
 import librosa
 from scipy import signal
+from silero_vad import load_silero_vad, get_speech_timestamps
 
 from output_formatter import write_transcript
 
@@ -145,18 +146,22 @@ class OptimizedTranscriptionService:
         self,
         model_name: str = MODEL_NAME,
         temperature: float = 0.0,
-        compression_ratio_threshold: Optional[float] = 2.4,
-        logprob_threshold: Optional[float] = -1.0,
-        no_speech_threshold: Optional[float] = 0.6,
-        vad_energy_threshold: float = 0.015,
-        vad_min_segment_duration: float = 0.3,
-        vad_merge_gap: float = 0.3,
+        compression_ratio_threshold: Optional[float] = 1.8,
+        logprob_threshold: Optional[float] = -0.5,
+        no_speech_threshold: Optional[float] = 0.5,
+        vad_energy_threshold: float = 0.008,
+        vad_min_segment_duration: float = 0.15,
+        vad_merge_gap: float = 0.5,
         max_segment_length: float = 30.0,
         return_timestamps: str = "chunk",
         batch_size: int = 8,
-        initial_prompt: str = ""
+        initial_prompt: str = "",
+        skip_vad: bool = False,
+        use_silero_vad: bool = True
     ) -> None:
         self.model_name = model_name
+        self.skip_vad = skip_vad
+        self.use_silero_vad = use_silero_vad
         self.device = "cuda" if torch.cuda.is_available() else "cpu"
         self.torch_dtype = torch.float16 if self.device == "cuda" else torch.float32
         
@@ -244,8 +249,62 @@ class OptimizedTranscriptionService:
         
         return audio_processed
     
-    def detect_speech_segments(self, audio: np.ndarray, sr: int) -> List[Tuple[float, float]]:
-        logger.info("Running VAD to detect speech segments")
+    def detect_speech_segments_silero(self, audio: np.ndarray, sr: int) -> List[Tuple[float, float]]:
+        """Use Silero VAD (neural network) for robust speech detection."""
+        logger.info("Running Silero VAD to detect speech segments")
+        
+        # Load Silero VAD model (cached after first load)
+        vad_model = load_silero_vad()
+        
+        # Convert to torch tensor (Silero expects float32)
+        audio_tensor = torch.from_numpy(audio).float()
+        
+        # Get speech timestamps from Silero
+        # threshold: speech probability threshold (lower = more sensitive)
+        # min_speech_duration_ms: minimum speech segment duration
+        # min_silence_duration_ms: minimum silence to split segments
+        speech_timestamps = get_speech_timestamps(
+            audio_tensor,
+            vad_model,
+            sampling_rate=sr,
+            threshold=0.25,  # Balance: not too sensitive to noise (was 0.2)
+            min_speech_duration_ms=150,  # Filter out very short non-speech sounds (was 50ms)
+            min_silence_duration_ms=250,  # Moderate silence gap (was 200ms)
+            speech_pad_ms=150,  # Moderate padding (was 200ms)
+        )
+        
+        if not speech_timestamps:
+            logger.warning("Silero VAD detected no speech")
+            return []
+        
+        # Convert sample indices to time in seconds
+        segments = []
+        for ts in speech_timestamps:
+            start_time = ts['start'] / sr
+            end_time = ts['end'] / sr
+            segments.append((start_time, end_time))
+        
+        # Split segments longer than max_segment_length
+        final_segments = []
+        for start, end in segments:
+            segment_duration = end - start
+            if segment_duration > self.max_segment_length:
+                num_splits = int(np.ceil(segment_duration / self.max_segment_length))
+                split_duration = segment_duration / num_splits
+                for i in range(num_splits):
+                    split_start = start + i * split_duration
+                    split_end = min(start + (i + 1) * split_duration, end)
+                    final_segments.append((split_start, split_end))
+            else:
+                final_segments.append((start, end))
+        
+        total_speech = sum(e - s for s, e in final_segments)
+        logger.info(f"Silero VAD detected {len(final_segments)} speech segments, total: {total_speech:.2f}s")
+        return final_segments
+    
+    def detect_speech_segments_energy(self, audio: np.ndarray, sr: int) -> List[Tuple[float, float]]:
+        """Legacy energy-based VAD (fallback)."""
+        logger.info("Running energy-based VAD to detect speech segments")
         
         frame_length = int(0.03 * sr)
         hop_length = int(0.015 * sr)
@@ -298,8 +357,15 @@ class OptimizedTranscriptionService:
                 final_segments.append((start, end))
         
         total_speech = sum(e - s for s, e in final_segments)
-        logger.info(f"Detected {len(final_segments)} speech segments, total: {total_speech:.2f}s")
+        logger.info(f"Energy VAD detected {len(final_segments)} speech segments, total: {total_speech:.2f}s")
         return final_segments
+    
+    def detect_speech_segments(self, audio: np.ndarray, sr: int) -> List[Tuple[float, float]]:
+        """Detect speech segments using Silero VAD (default) or energy-based VAD."""
+        if self.use_silero_vad:
+            return self.detect_speech_segments_silero(audio, sr)
+        else:
+            return self.detect_speech_segments_energy(audio, sr)
     
     def _is_repetitive(self, text: str, char_threshold: float = 0.6, word_threshold: float = 0.7) -> bool:
         if len(text) < 10:
@@ -344,11 +410,15 @@ class OptimizedTranscriptionService:
             logger.info(f"Starting transcription for: {file_path}")
             
             audio_preprocessed = self.preprocess_audio(audio_array, sr=16000)
-            speech_segments = self.detect_speech_segments(audio_preprocessed, sr=16000)
             
-            if not speech_segments:
-                logger.warning("No speech segments detected, falling back to full audio")
+            if self.skip_vad:
+                logger.info("VAD disabled, processing full audio")
                 speech_segments = [(0.0, duration)]
+            else:
+                speech_segments = self.detect_speech_segments(audio_preprocessed, sr=16000)
+                if not speech_segments:
+                    logger.warning("No speech segments detected, falling back to full audio")
+                    speech_segments = [(0.0, duration)]
             
             generate_kwargs = {"language": "cantonese"}
             if self.temperature is not None:
@@ -361,7 +431,7 @@ class OptimizedTranscriptionService:
                 generate_kwargs["no_speech_threshold"] = self.no_speech_threshold
             if self.initial_prompt:
                 prompt_ids = self.processor.get_prompt_ids(self.initial_prompt, return_tensors="pt")
-                generate_kwargs["prompt_ids"] = prompt_ids.squeeze()
+                generate_kwargs["prompt_ids"] = prompt_ids.squeeze().to(self.device)
                 logger.info(f"Using initial prompt with {len(self.initial_prompt)} characters")
             
             segment_audios = []
@@ -501,7 +571,9 @@ def run(args: argparse.Namespace) -> int:
             max_segment_length=args.max_segment_length,
             return_timestamps=args.return_timestamps,
             batch_size=args.batch_size,
-            initial_prompt=initial_prompt
+            initial_prompt=initial_prompt,
+            skip_vad=args.no_vad,
+            use_silero_vad=not args.energy_vad
         )
         
         logger.info(f"Starting transcription: {input_path}")
@@ -615,27 +687,41 @@ Examples:
     )
     
     advanced_group.add_argument(
+        "--no-vad",
+        action="store_true",
+        help="Disable Voice Activity Detection and process full audio. "
+             "Use this if VAD is dropping speech segments mixed with loud sounds."
+    )
+    
+    advanced_group.add_argument(
+        "--energy-vad",
+        action="store_true",
+        help="Use legacy energy-based VAD instead of Silero VAD (neural network). "
+             "Silero VAD is more accurate but slightly slower."
+    )
+    
+    advanced_group.add_argument(
         "--vad-energy-threshold",
         type=float,
-        default=0.015,
+        default=0.008,
         help="Energy/RMS threshold for VAD speech detection (relative to max energy). "
-             "Lower values detect more speech but may include noise. (default: 0.015)"
+             "Lower values detect more speech but may include noise. (default: 0.008)"
     )
     
     advanced_group.add_argument(
         "--vad-min-segment-duration",
         type=float,
-        default=0.3,
+        default=0.15,
         help="Minimum duration (seconds) for a speech segment to be kept. "
-             "Shorter segments are filtered as noise. (default: 0.3)"
+             "Shorter segments are filtered as noise. (default: 0.15)"
     )
     
     advanced_group.add_argument(
         "--vad-merge-gap",
         type=float,
-        default=0.3,
+        default=0.5,
         help="Maximum gap (seconds) between speech segments to merge them. "
-             "Segments closer than this are combined. (default: 0.3)"
+             "Segments closer than this are combined. (default: 0.5)"
     )
     
     advanced_group.add_argument(
@@ -666,25 +752,25 @@ Examples:
     advanced_group.add_argument(
         "--compression-ratio-threshold",
         type=float,
-        default=2.4,
+        default=1.8,
         help="Threshold for detecting repetitive/compressed output. "
-             "Lower values are more strict. (default: 2.4)"
+             "Lower values are more strict. (default: 1.8)"
     )
     
     advanced_group.add_argument(
         "--logprob-threshold",
         type=float,
-        default=-1.0,
+        default=-0.5,
         help="Minimum average log probability for generated tokens. "
-             "Segments below this may be filtered. (default: -1.0)"
+             "Segments below this may be filtered. (default: -0.5)"
     )
     
     advanced_group.add_argument(
         "--no-speech-threshold",
         type=float,
-        default=0.6,
+        default=0.5,
         help="Threshold for detecting non-speech segments. "
-             "Higher values are more strict. (default: 0.6)"
+             "Higher values are more strict. (default: 0.5)"
     )
     
     advanced_group.add_argument(
