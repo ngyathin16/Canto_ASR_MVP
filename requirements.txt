@@ -17,3 +17,12 @@ python-dotenv>=1.0.0        # environment configuration
 tqdm>=4.67.0                # progress bars
 pydantic>=2.9.2             # data validation and typing support
 openai>=1.0.0               # Azure OpenAI API client
+azure-cognitiveservices-speech>=1.35.0  # Azure TTS for audio generation
+
+# Fine-tuning Dependencies
+datasets>=2.14.0            # HuggingFace datasets for data loading
+peft>=0.7.0                 # LoRA and parameter-efficient fine-tuning
+evaluate>=0.4.0             # Metrics (CER) for evaluation
+accelerate>=0.25.0          # Training acceleration utilities
+bitsandbytes>=0.41.0        # 8-bit optimizer for memory efficiency
+nvtx>=0.2.5                 # NVIDIA Tools Extension for profiling (optional)

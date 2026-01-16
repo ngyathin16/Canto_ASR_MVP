@@ -1,0 +1,24 @@
+{
+  "context_description": "A dialogue from the Hong Kong movie 'From Beijing with Love' (国产凌凌漆) featuring Stephen Chow.",
+  "terms": {
+    "Equipment_and_Items": [
+      "UFO來福槍 (UFO Rifle)",
+      "224痰罐仔子彈 (224 Spittoon-boy Bullets)",
+      "中國製PPK (Chinese-made PPK)",
+      "古惑的槍 (Tricky Gun)",
+      "超級間諜凳 (Super Spy Chair)",
+      "風度翩翩的豬肉佬 (Dashing Pork Vendor)"
+    ],
+    "Names_and_Entities": [
+      "凌凌漆 (Ling Ling Qi / 007)",
+      "李香琴 (Li Xiangqin)",
+      "達文西 (Da Wenxi)",
+      "司令 (Commander)"
+    ],
+    "Idioms_and_Actions": [
+      "梅花間竹 (Plum blossom pattern / Alternating)",
+      "無聲無色 (Silent and colorless/invisible)",
+      "唏噓 (Melancholy/Sighing)"
+    ]
+  }
+}

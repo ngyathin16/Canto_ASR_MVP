@@ -1,0 +1,20 @@
+{
+  "sentences": [
+    "今日要用天秤吊批鋼筋上去十五樓。",
+    "扎鐵師傅話要加多啲花鐵先夠穩陣。",
+    "石屎車遲咗，我哋要等多半個鐘。",
+    "嗰邊有個吼要補返，記住用牛奶水。",
+    "雞頭司機話部機有啲問題，要搵大偈睇下。",
+    "呢度啲瓦仔貼得唔靚，要剷走重新貼過。",
+    "安全主任話要戴齊地盤三寶先可以入場。",
+    "聽日有皇家佬嚟巡查，全部位執好啲。",
+    "個震船壞咗，要叫人嚟整返先繼續壓實。",
+    "呢幅牆有啲耳鵝，要執返正先油漆。",
+    "師傅，幫手攞支士巴拿過嚟擰實啲螺絲。",
+    "落石屎之前記住檢查晒啲飛碟有冇放好。"
+  ],
+  "num_sentences": 12,
+  "voice": "zh-HK-WanLungNeural",
+  "combined_audio": "/home/ngyathin16/Canto_ASR_MVP/fine_tuning/test_evaluation/test_audio_combined.wav",
+  "ground_truth": "/home/ngyathin16/Canto_ASR_MVP/fine_tuning/test_evaluation/ground_truth.txt"
+}

@@ -19,3 +19,14 @@ ENV/
 # OS
 .DS_Store
 Thumbs.db
+
+# Large model files and training artifacts
+fine_tuning/checkpoints/
+fine_tuning/profiler_logs/
+fine_tuning/model/
+fine_tuning/model_v2/
+fine_tuning/model_jacky/
+fine_tuning/dataset/
+*.bin
+*.safetensors
+*.arrow

@@ -1,0 +1,938 @@
+[
+  {
+    "audio_file": "clip_0000.wav",
+    "transcript": "等陣天秤過嚟先再上貨啦。",
+    "term": "天秤",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0001.wav",
+    "transcript": "天請今日要吊幾多轉物料上頂？",
+    "term": "天請",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0002.wav",
+    "transcript": "你哋快啲扎鐵，下午要落石屎。",
+    "term": "扎鐵",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0003.wav",
+    "transcript": "記住叫車早半個鐘送石屎入嚟。",
+    "term": "石屎",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0004.wav",
+    "transcript": "唔好成日靠貓紙，自己要記熟做法。",
+    "term": "貓紙",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0005.wav",
+    "transcript": "嗰啲佛沙明日先吊上去安裝。",
+    "term": "佛沙",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0006.wav",
+    "transcript": "開震船之前同我哋講聲，下面有人。",
+    "term": "震船",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0007.wav",
+    "transcript": "呢邊好焗，搬部寶路華過嚟吹下。",
+    "term": "寶路華",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0008.wav",
+    "transcript": "貓仔入唔到去，嗰邊要人手剷泥。",
+    "term": "貓仔",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0009.wav",
+    "transcript": "雞頭行過嚟嗰邊時小心地下啲管。",
+    "term": "雞頭",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0010.wav",
+    "transcript": "行路睇路，前面個吼未封好。",
+    "term": "吼",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0011.wav",
+    "transcript": "呢個窿要再擴大少少先夠位過管。",
+    "term": "窿",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0012.wav",
+    "transcript": "批磚之前記得先掃一層牛奶水。",
+    "term": "牛奶水",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0013.wav",
+    "transcript": "狗臂架鎖實未？鬆就唔好上人。",
+    "term": "狗臂架",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0014.wav",
+    "transcript": "趷雞陣底嗰啲支撐唔好亂拎走。",
+    "term": "趷雞陣",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0015.wav",
+    "transcript": "嗰條工字要再加兩個狗臂架固定。",
+    "term": "工字",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0016.wav",
+    "transcript": "街吊幾點到場吊嗰批佛沙？",
+    "term": "街吊",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0017.wav",
+    "transcript": "門頭陣要先校水平先可以封模。",
+    "term": "門頭陣",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0018.wav",
+    "transcript": "呢層已經係靚仔面，唔好再拖嘢。",
+    "term": "靚仔面",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0019.wav",
+    "transcript": "廁所啲瓦仔記得跟圖紙排位。",
+    "term": "瓦仔",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0020.wav",
+    "transcript": "呢兩塊板要夾實先至算係雙層巴士。",
+    "term": "雙層巴士",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0021.wav",
+    "transcript": "個短仔唔夠長喎，換條長啲嘅喉啦。",
+    "term": "短仔",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0022.wav",
+    "transcript": "記住喺底鋪晒膠凳仔先至綁上層鐵。",
+    "term": "膠凳仔",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0023.wav",
+    "transcript": "呢啲鐵件要先攞去鹽水做好防銹先用。",
+    "term": "鹽水",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0024.wav",
+    "transcript": "地下嗰條鹽水喉有冇做壓力測試未？",
+    "term": "鹽水喉",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0025.wav",
+    "transcript": "等陣吊料你哋兩個落去幫手埋碼。",
+    "term": "埋碼",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0026.wav",
+    "transcript": "呢幅磚牆有耳鵝，條線唔直要重砌。",
+    "term": "耳鵝",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0027.wav",
+    "transcript": "你啤靶啤到咁樣，角位完全唔夠九十度。",
+    "term": "啤靶",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0028.wav",
+    "transcript": "外牆啲粒鈕要跟圖紙嗰個間距開。",
+    "term": "粒鈕",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0029.wav",
+    "transcript": "個窗位啲磨耳唔平，油之前要批順佢。",
+    "term": "磨耳",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0030.wav",
+    "transcript": "接水線嗰陣記得跟足顏色同條路走。",
+    "term": "水線",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0031.wav",
+    "transcript": "呢條焊位好雞屎旱，要剷走重焊過。",
+    "term": "雞屎旱",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0032.wav",
+    "transcript": "呢啲位一定要用過山螺絲先夠實淨。",
+    "term": "過山",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0033.wav",
+    "transcript": "條K批擺歪咗，掹直先好回填泥。",
+    "term": "K批",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0034.wav",
+    "transcript": "而家只係見到石頭皮，仲未入到好石。",
+    "term": "石頭皮",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0035.wav",
+    "transcript": "等陣要爆石，你哋全部退去安全距離。",
+    "term": "爆石",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0036.wav",
+    "transcript": "呢個坑唔夠一井咁大，再開闊少少。",
+    "term": "一井",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0037.wav",
+    "transcript": "叫人先檢查薄樂條鋼纜先再起吊。",
+    "term": "薄樂",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0038.wav",
+    "transcript": "打完灰用小路寶吸乾淨先好收工。",
+    "term": "小路寶",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0039.wav",
+    "transcript": "上層柱要坐喺大砧板嗰個轉換層度。",
+    "term": "大砧板",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0040.wav",
+    "transcript": "搭棚記得夾實個馬騮頭，唔好鬆鬆地。",
+    "term": "馬騮頭",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0041.wav",
+    "transcript": "落完石屎即刻用震筆震實晒佢。",
+    "term": "震筆",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0042.wav",
+    "transcript": "啲地腳未攪掂之前唔好心急起柱。",
+    "term": "地腳",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0043.wav",
+    "transcript": "開士機淨係載料，唔准載人呀知唔知？",
+    "term": "開士機",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0044.wav",
+    "transcript": "冇牌嗰啲唔好亂上鉸剪台做嘢。",
+    "term": "鉸剪台",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0045.wav",
+    "transcript": "呢條電纜而家有氣，唔好掂住佢。",
+    "term": "有氣",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0046.wav",
+    "transcript": "草鞋底要先打好先可以紮花籃。",
+    "term": "草鞋底",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0047.wav",
+    "transcript": "關細啲個嘩佬，水流得太犀利啦。",
+    "term": "嘩佬",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0048.wav",
+    "transcript": "等陣用吊機將啲唉批吊落坑度。",
+    "term": "啲唉批",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0049.wav",
+    "transcript": "記住幫嗰口喉加盲餅封實佢。",
+    "term": "盲餅",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0050.wav",
+    "transcript": "今日三點喺山邊燒炮，全部人要清場。",
+    "term": "燒炮",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0051.wav",
+    "transcript": "開風機之前先撳著個九線掣。",
+    "term": "九線掣",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0052.wav",
+    "transcript": "呢條膠批要預埋位置比電工穿線。",
+    "term": "膠批",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0053.wav",
+    "transcript": "樓板底嗰啲蝦片唔好拆甩晒佢。",
+    "term": "蝦片",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0054.wav",
+    "transcript": "用啲篩尾泥幫我補平呢個位。",
+    "term": "篩尾泥",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0055.wav",
+    "transcript": "入龍之前戴好頭盔同燈先落去。",
+    "term": "龍",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0056.wav",
+    "transcript": "上貓梯記得扣安全帶，唔好心急。",
+    "term": "貓梯",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0057.wav",
+    "transcript": "個花籃紮好未先落坑擺位呀？",
+    "term": "花籃",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0058.wav",
+    "transcript": "出車前擺定個波板糖喺路口度。",
+    "term": "波板糖",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0059.wav",
+    "transcript": "等測量師嚟抄數先好郁個魚尾。",
+    "term": "魚尾",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0060.wav",
+    "transcript": "呢支吊臂撈鼎幾多噸你有冇 Check 過？",
+    "term": "撈鼎",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0061.wav",
+    "transcript": "記住關好圍街板個門，唔好畀人亂入。",
+    "term": "圍街板",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0062.wav",
+    "transcript": "用鐵筆慢慢撬開塊舊 Template，唔好太大力。",
+    "term": "鐵筆",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0063.wav",
+    "transcript": "拆模板之前，啲過山螺絲全部要先拎晒出嚟。",
+    "term": "過山螺絲",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0064.wav",
+    "transcript": "啲獅山吼記得收口，用 Grout 補平先得。",
+    "term": "獅山吼",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0065.wav",
+    "transcript": "行過嗰邊橋板小心啲，下面仲有人做嘢。",
+    "term": "橋板",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0066.wav",
+    "transcript": "邊個拎走咗我套士巴拿，快啲還返嚟先。",
+    "term": "士巴拿",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0067.wav",
+    "transcript": "呢條花鐵做主筋夠唔夠直，你再 Check 下。",
+    "term": "花鐵",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0068.wav",
+    "transcript": "呢度用光身鐵做箍筋，唔好用錯花鐵呀。",
+    "term": "光身鐵",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0069.wav",
+    "transcript": "樓面啲留鐵要保護好，唔好整彎晒佢。",
+    "term": "留鐵",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0070.wav",
+    "transcript": "呢條陣同個柱接駁位要再量多次水平。",
+    "term": "陣",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0071.wav",
+    "transcript": "主陣個位快啲 Set 好模，天秤等緊落料。",
+    "term": "主陣",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0072.wav",
+    "transcript": "副陣啲筋跟住主陣彎，唔好亂改做法。",
+    "term": "副陣",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0073.wav",
+    "transcript": "呢條係反陣喎，樓面要預位畀佢起高啲。",
+    "term": "反陣",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0074.wav",
+    "transcript": "記住呢幅係吊墻，下面唔好亂打膠窿。",
+    "term": "吊墻",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0075.wav",
+    "transcript": "啲師傅鐵要夾實主筋，唔好畀距離走樣。",
+    "term": "師傅鐵",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0076.wav",
+    "transcript": "鋼筋底嗰啲飛碟擺密啲，保護層先至夠。",
+    "term": "飛碟",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0077.wav",
+    "transcript": "呢張馬路網鋪好之後先可以倒 Concrete。",
+    "term": "馬路網",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0078.wav",
+    "transcript": "批盪前先釘好雞仔網，唔係之後易爆裂。",
+    "term": "雞仔網",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0079.wav",
+    "transcript": "開風煤之前檢查好喉同咀，唔好漏氣。",
+    "term": "風煤",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0080.wav",
+    "transcript": "啲風煤全部收晒入風煤籠先至好吊。",
+    "term": "風煤籠",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0081.wav",
+    "transcript": "搬風煤樽嗰陣記得戴手套同開叉車。",
+    "term": "風煤樽",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0082.wav",
+    "transcript": "落石屎前喺塊板度掃勻啲板模油先。",
+    "term": "板模油",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0083.wav",
+    "transcript": "部機漏油喇，快啲攞個豬兜擺喺下面。",
+    "term": "豬兜",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0084.wav",
+    "transcript": "個燒豬盤擺正啲，唔好滴到成地都油。",
+    "term": "燒豬盤",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0085.wav",
+    "transcript": "屈筋之前量好個R位，賓州仔set準啲。",
+    "term": "賓州仔",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0086.wav",
+    "transcript": "小心啲，前面個沙井蓋未冚實會跣腳。",
+    "term": "沙井",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0087.wav",
+    "transcript": "嗰邊個man-hole 今日有冇人落去inspection？",
+    "term": "man-hole",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0088.wav",
+    "transcript": "喺坑渠竉附近做嘢要擺圍欄同warning sign。",
+    "term": "坑渠竉",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0089.wav",
+    "transcript": "打閘板之前同engineer confirm 埋alignment 未？",
+    "term": "閘板",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0090.wav",
+    "transcript": "呢層批石屎收咗貨未，幾時可以起貨？",
+    "term": "起貨",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0091.wav",
+    "transcript": "等下唔好落石屎，仲未收鐵呀。",
+    "term": "收鐵",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0092.wav",
+    "transcript": "外牆掛籠跟住樓層升緊，上面做緊清理。",
+    "term": "掛籠",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0093.wav",
+    "transcript": "呢個slab 記得叫車三分仔石屎，唔好落錯。",
+    "term": "三分仔石屎",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0094.wav",
+    "transcript": "呢面柱有幾個黃蜂竇，要剷走再補砂漿。",
+    "term": "黃蜂竇",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0095.wav",
+    "transcript": "啲勾仔夠唔夠，用嚟駁多幾條細筋。",
+    "term": "勾仔",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0096.wav",
+    "transcript": "上吊船之前check 晒safety belt 同lifeline 未？",
+    "term": "吊船",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0097.wav",
+    "transcript": "冇水紙水務署唔會過數，你搵agent 跟進下。",
+    "term": "水紙",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0098.wav",
+    "transcript": "呢条威也起重用嗰条，唔好攞嚟綁雜物。",
+    "term": "威也",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0099.wav",
+    "transcript": "有問題同個判頭講先，唔好自己亂改做法。",
+    "term": "判頭",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0100.wav",
+    "transcript": "呢單嘢要先同大判個Office Confirm。",
+    "term": "大判",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0101.wav",
+    "transcript": "你搵返個拾仔嚟，叫佢即刻加人開工。",
+    "term": "拾仔",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0102.wav",
+    "transcript": "二判今日點解又冇人上嚟開工？",
+    "term": "二判",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0103.wav",
+    "transcript": "三沙啲師傅噚日收工收到好夜。",
+    "term": "三沙",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0104.wav",
+    "transcript": "三判嗰邊鋁窗仲追唔追到期？",
+    "term": "三判",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0105.wav",
+    "transcript": "叫蛇頭聽日唔好再甩人啦。",
+    "term": "蛇頭",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0106.wav",
+    "transcript": "蛇仔量完數未，等緊你出Level。",
+    "term": "蛇仔",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0107.wav",
+    "transcript": "蛇佬拉好哂條Main Cable先好收板。",
+    "term": "蛇佬",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0108.wav",
+    "transcript": "電王話呢排成日Trip，要查清楚先。",
+    "term": "電王",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0109.wav",
+    "transcript": "墨王，呢條線你再彈直少少啦。",
+    "term": "墨王",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0110.wav",
+    "transcript": "搵大偈上嚟Check吓部吊機有冇漏油。",
+    "term": "大偈",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0111.wav",
+    "transcript": "叻架佬，幫我吊批鋼筋去八樓先。",
+    "term": "叻架佬",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0112.wav",
+    "transcript": "大力佬今日有冇Time Slot俾我哋吊料？",
+    "term": "大力佬",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0113.wav",
+    "transcript": "牛仔啱啱巡完場，話嗰度要圍封。",
+    "term": "牛仔",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0114.wav",
+    "transcript": "阿SIR問點解個進度同Program差咁遠。",
+    "term": "阿SIR",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0115.wav",
+    "transcript": "英展話要改Detail，你哋等等先開模。",
+    "term": "英展",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0116.wav",
+    "transcript": "N展，你睇下呢幅Shop Drawing啱唔啱先。",
+    "term": "N展",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0117.wav",
+    "transcript": "聽日有皇家佬上嚟，記得全部戴好PPE。",
+    "term": "皇家佬",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0118.wav",
+    "transcript": "安督成日捉安全帶，你哋唔好心懶。",
+    "term": "安督",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0119.wav",
+    "transcript": "幫辦啱啱影咗相，話啲Housekeeping好差。",
+    "term": "幫辦",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0120.wav",
+    "transcript": "聽日老總上嚟巡場，全部位收拾好啲。",
+    "term": "老總",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0121.wav",
+    "transcript": "靚仔，你啲安全帶扣好未先上去呀？",
+    "term": "靚仔",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0122.wav",
+    "transcript": "阿姐，你幫手喺度掃乾淨啲碎石先。",
+    "term": "阿姐",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0123.wav",
+    "transcript": "叫幾個CID過嚟搬走呢啲木板。",
+    "term": "CID",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0124.wav",
+    "transcript": "Lift佬話暫停保養，升降機而家唔好再用。",
+    "term": "Lift佬",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0125.wav",
+    "transcript": "入人閘前記住攞齊地盤三寶出嚟畀人check。",
+    "term": "地盤三寶",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0126.wav",
+    "transcript": "做高空焊接冇銀卡，安全主任唔畀你開工。",
+    "term": "銀卡",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0127.wav",
+    "transcript": "佢完全白紙，你派個大工帶住佢做。",
+    "term": "白紙",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0128.wav",
+    "transcript": "呢個位一定要大工嚟收口，唔好畀白紙搞。",
+    "term": "大工",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0129.wav",
+    "transcript": "中工就跟住大工做，啲複雜位唔好自己決定。",
+    "term": "中工",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0130.wav",
+    "transcript": "今日洗手出糧，放工記得去架步度攞錢。",
+    "term": "洗手出糧",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0131.wav",
+    "transcript": "風火水電啲圖改咗未？唔改好唔好開工先？",
+    "term": "風火水電",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0132.wav",
+    "transcript": "工程師後日要上廠驗貨，你哋預早整好樣板。",
+    "term": "上廠",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0133.wav",
+    "transcript": "落雨喇，啲電工具全部收返入架步度。",
+    "term": "架步",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0134.wav",
+    "transcript": "想去水廁就行去車閘旁邊嗰個貨櫃後面。",
+    "term": "水廁",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0135.wav",
+    "transcript": "化學廁好臭，你哋快啲用完就出嚟啦。",
+    "term": "化學廁",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0136.wav",
+    "transcript": "冇卡就唔好企喺人閘度阻住人入出。",
+    "term": "人閘",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0137.wav",
+    "transcript": "車閘嗰邊有泥頭車入嚟，大家閃開少少先。",
+    "term": "車閘",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0138.wav",
+    "transcript": "之前嗰單飛土之後，安全巡查而家好嚴。",
+    "term": "飛土",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0139.wav",
+    "transcript": "上廠記住帶埋歡樂咭，過關冇就好麻煩。",
+    "term": "歡樂咭",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0140.wav",
+    "transcript": "呢單冇咖哩架，齋做數要靚啲。",
+    "term": "咖哩",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0141.wav",
+    "transcript": "成日企喺度唔做嘢，你當自己企鵝咩？",
+    "term": "企鵝",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0142.wav",
+    "transcript": "今日唔準蛇王，全部人落去開工。",
+    "term": "蛇王",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0143.wav",
+    "transcript": "嗰個飛機師又話返又唔見人。",
+    "term": "飛機師",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0144.wav",
+    "transcript": "你咪又做消防員，兩日見你一次。",
+    "term": "消防員",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0145.wav",
+    "transcript": "個波王又冇影，成個星期唔上嚟。",
+    "term": "波王",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0146.wav",
+    "transcript": "未著安全鞋唔好入 site，知唔知？",
+    "term": "安全鞋",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0147.wav",
+    "transcript": "呢層批石矢今日一定要起貨。",
+    "term": "起貨",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0148.wav",
+    "transcript": "呢個單位幾時可以交吉俾發展商？",
+    "term": "交吉",
+    "type": "Interrogative"
+  },
+  {
+    "audio_file": "clip_0149.wav",
+    "transcript": "上樓前記得拎晒啲架餐上去。",
+    "term": "架餐",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0150.wav",
+    "transcript": "牛房附近小心啲，唔好亂掂電纜。",
+    "term": "牛房",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0151.wav",
+    "transcript": "倒石矢之前先 check 好晒 formwork。",
+    "term": "石矢",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0152.wav",
+    "transcript": "呢幅垟未企直，唔好收線住。",
+    "term": "垟",
+    "type": "Declarative"
+  },
+  {
+    "audio_file": "clip_0153.wav",
+    "transcript": "等陣叫人嚟度位度位先再作金。",
+    "term": "作金",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0154.wav",
+    "transcript": "石矢二山出門口之前影低相先。",
+    "term": "二山",
+    "type": "Imperative"
+  },
+  {
+    "audio_file": "clip_0155.wav",
+    "transcript": "冇水紙喉管驗唔到，快啲搵水務署。",
+    "term": "水紙",
+    "type": "Declarative"
+  }
+]
